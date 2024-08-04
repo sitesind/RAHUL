@@ -1,0 +1,218 @@
+Bharat Vishvakarma 
+Sunaina bawa
+Priyadarshan Agarwal
+
+<div class="slider">
+      <div class="imgs">
+        <!-- you can add divs with class img here and they will be 
+             automatically added to slider -->
+        <!-- style="left: 0;" in case JS is disabled -->
+        <div class="img" style="left: 0;"> 
+          <span>Image 1</span>
+        </div>
+        <div class="img">
+          <span>Image 2</span>
+        </div>
+        <div class="img">
+          <span>Image 3</span>
+        </div>
+        <div class="img">
+          <span>Image 4</span>
+        </div>
+      </div>
+      <div class="dots"></div>
+    </div>
+    
+    <div id="productSetup" >
+
+    </div>
+
+
+
+    /* sliding image partition*/
+
+html, body { height: 100%; margin: 0; }
+
+.slider, .slider .imgs {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  position: relative;
+}
+
+.slider {
+    margin-top: 30px;
+  height: 75%;
+  max-height: 600px;
+}
+
+.slider .imgs {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider .img {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  left: 100%;
+  /* animation duration can't be greater than variable interval in JS! */
+  /* check JS for other settings */
+  animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+  animation-fill-mode: forwards;
+  background-size: cover !important;
+  background-position: 50% !important;
+}
+
+/* Change images here */
+.slider .img:nth-of-type(1) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.gif?v=1664442921"); }
+.slider .img:nth-of-type(2) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/DESKTOP-Banner-WB_4_2000x.gif?v=1664782144"); }
+.slider .img:nth-of-type(3) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.gif?v=1664442921"); }
+.slider .img:nth-of-type(4) { background: url("https://cdn.shopify.com/s/files/1/0057/8938/4802/files/SN-Desktop-Banner-Wave-Style_1_2000x.jpg?v=1663914840"); }
+
+.slider .img span {
+  padding: 7px 20px;
+  background: rgba(0, 0, 0, .8);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.dots {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.active-dot {
+  background: #3f3f3f;
+  cursor: default;
+}
+
+@keyframes leftNext {
+  from { left: 100%; }
+  to { left: 0; }
+}
+
+@keyframes leftCurr {
+  from { left: 0; }
+  to { left: -100%; }
+}
+
+@keyframes rightNext {
+  from { left: -100%; }
+  to { left: 0; }
+}
+
+@keyframes rightCurr {
+  from { left: 0; }
+  to { left: 100%; }
+}
+
+
+
+
+  {
+  const sliders = document.querySelectorAll(".slider");
+  // interval between switching images
+  // can't be less than your animation duration in css!
+  const interval = 2800;
+  // if you don't want to first animation last longer than other animations  
+  // set animDuration (in miliseconds) to your value of animation duration in css
+  const animDuration = 600;
+
+  for (let i = 0; i < sliders.length; ++i) {
+    const slider = sliders[i];
+    const dots = slider.querySelector(".dots");
+    const sliderImgs = slider.querySelectorAll(".img");
+
+    let currImg = 0;
+    let prevImg = sliderImgs.length - 1;
+    let intrvl;
+    let timeout;
+
+    // Creates dots and add listeners to them
+    for (let i = 0; i < sliderImgs.length; ++i) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      dots.appendChild(dot);
+      dot.addEventListener("click", dotClick.bind(null, i), false);
+    }
+
+    const allDots = dots.querySelectorAll(".dot");
+    allDots[0].classList.add("active-dot");
+
+    sliderImgs[0].style.left = "0";
+    timeout = setTimeout(() => {
+      animateSlider();
+      sliderImgs[0].style.left = "";
+      intrvl = setInterval(animateSlider, interval);
+    }, interval - animDuration);   
+
+    /**
+     * Animates images
+     * @param {number} [nextImg] - index of next image to show
+     * @param {boolean} [right = false] - animate to right
+     */
+    function animateSlider(nextImg, right) {
+      if (!nextImg)
+        nextImg = currImg + 1 < sliderImgs.length ? currImg + 2 : 1;
+
+      --nextImg;
+      sliderImgs[prevImg].style.animationName = "";
+
+      if (!right) {
+        sliderImgs[nextImg].style.animationName = "leftNext";
+        sliderImgs[currImg].style.animationName = "leftCurr";
+      } 
+      else {
+        sliderImgs[nextImg].style.animationName = "rightNext";
+        sliderImgs[currImg].style.animationName = "rightCurr";
+      }
+
+      prevImg = currImg;
+      currImg = nextImg;
+
+      currDot = allDots[currImg];
+      currDot.classList.add("active-dot");
+      prevDot = allDots[prevImg];
+      prevDot.classList.remove("active-dot");
+    }
+
+    /**
+     * Decides if animate to left or right and highlights clicked dot
+     * @param {number} num - index of clicked dot
+     */
+    function dotClick(num) {
+      if (num == currImg)
+        return false;
+
+      clearTimeout(timeout);
+      clearInterval(intrvl);
+
+      if (num > currImg)
+        animateSlider(num + 1);
+      else
+        animateSlider(num + 1, true);
+
+      intrvl = setInterval(animateSlider, interval);
+    }
+  }
+}

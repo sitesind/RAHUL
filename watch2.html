@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+    #header{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    left: 0px;
+    z-index: 9999;
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    
+    box-shadow: rgba(40, 40, 40, 0.1) 0px 20px 20px -10px;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mouse{
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+}
+.curser{
+  width: 90%;
+  padding: 40px;
+  margin: auto;
+  display:grid;
+  /* margin-top: 80px; */
+  display: none;
+  cursor: pointer;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: space-around;
+  position: absolute;
+  position: fixed;
+  /* margin-left: 150px; */
+  background-color: #fff;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.curser>div{
+  margin: auto;
+  text-align: center;
+}
+
+.search>input{
+  border-radius: 23px;
+  padding: 0 30px;
+  border: none;
+  /* margin-top: 14px; */
+  background-color: #f7f4f4;
+  /* border: 2px solid red; */
+}
+
+.category{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.search{
+    display: flex;
+    
+    gap: 30px;
+}
+
+ /* body{
+    margin: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+}  */
+.container{
+    
+    width: 100%;
+    /* margin-top:20%; */
+
+}
+.wrapper{
+    width: 90%;
+    height:100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.text{
+    flex-basis: 45%;
+
+}
+.all-images{
+    height: 80vh;
+    display: flex;
+}
+.small-images{
+    display: flex;
+    flex-direction: column;
+
+}
+.small-images img{
+    height: 19vh;
+    margin-bottom: 9px;
+    cursor: pointer;
+    /* opacity: 0.2; */
+}
+.small-images img:hover{
+    opacity: 1;
+} 
+.main-images img{
+    height: 100%;
+    margin-left: 20px;
+
+}
+p{
+    margin-bottom: 20px;
+}
+.brand{
+    background-color: #008000;
+    width: fit-content;
+    color:#fff;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+h2{
+    font-size: 35px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.review{
+    background-color: green;
+    display: inline-block;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+
+}
+.review .fa{
+    color:#fff;
+}
+.price{
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+
+}
+.price-box{
+      display: flex;
+      align-items: center;
+
+}
+/* input{
+    width: 30px;
+    border: 2px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+    
+} */
+.text button{
+    width: 140px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fe980f;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+} 
+.text >button .fa{
+    margin-right: 10px;
+}
+.buy{
+    background-color: rgb(201,97,57);
+}
+.main{
+    background-color: ghostwhite;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    justify-content: space-between;
+} 
+.main{
+    background-color: ghostwhite;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    justify-content: space-between;
+}
+
+.sbmain p{
+    float: right;
+    width: 200px;
+    font-family:Montserrat; 
+}
+.sbmain img{
+    height: 60px;
+    padding-left: 40px;
+}
+
+.main2{
+    background-color: black;
+    color:rgb(201, 194, 194);
+    
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    justify-content: space-between;
+}
+.sbmain1 p{
+    font-family:Montserrat;
+    margin-left:50px ;
+}
+
+.sbmain2 img{
+    width: 100%;
+}
+
+.main4 h1{
+    text-align:center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.main4 p{
+   padding: 8px;
+   text-align: center;
+   font-family: monospace;
+   font-size:15px;
+}
+p{
+    padding-top: 20px;
+}
+#footer1{
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+    width: 96%;
+    margin: auto;
+    margin-top: 30px;
+}
+#footer1 p{
+  font-size: 13px;
+  color: rgb(158, 157, 157);
+}
+
+.f1{
+    width:10%;
+
+}
+.vLine{
+  border: 1px solid rgb(230, 230, 230);;
+  width: 0px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+
+}
+.oddL{
+  margin-top: 50px;
+  margin-bottom: 120px;
+  margin-right: -40px;
+
+}
+.oddL2{
+  margin-top: 50px;
+  margin-bottom: 180px;
+  margin-right: -40px; 
+}
+
+.socialMedia{
+  display: flex;
+  gap: 30px;
+  font-size: 25px;
+  width: 96%;
+  margin: auto;
+}
+.playStore{
+  display: flex;
+}
+.extra{
+  display: flex;
+  gap: 600px;
+  width: 96%;
+  margin: auto;
+
+}
+
+
+.emailSubmit{
+  border: 1px solid red;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.emailSubmit>button{
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 17px;
+  padding: 10px 25px;
+  background-color: rgb(220, 24, 37);
+}
+.emailSubmit>input{
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+hr{
+    width: 96%;
+    margin: auto;
+}
+a{
+  text-decoration: none;
+  color:black
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="header">
+            <div class="logo">
+              <a href="homepage.html"><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5_small.png?v=1661838672" alt=""></a>
+            </div>
+            <div class="category">
+                <p> <button class="mouse">CATEGORIES</button></p>
+                <p>SAIL WITH BOAT</p>
+                <p>OFFER ZONE</p>
+                <p>MORE</p>
+            </div>
+            <div class="search">
+                <input type="search" placeholder='Enter Product Name Here'>
+                
+                <p><i class="fa-solid fa-user"></i></p>
+                <p><i class="fa-solid fa-headset"></i></p>
+                <p><i class="fa-solid fa-cart-shopping"></i></p>
+            </div>
+        </div>
+        <div class="curser">
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_100x.png?v=1663752600" alt="">
+            <h4><a href="Earburd.html">Airdropes True Wirelss</a></h4>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_100x.png?v=1663752867" alt="">
+            <h3><a href="Headphone.html">Rockerz Wireless</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_100x.jpg?v=1663753638" alt="" onchange="">
+            <h3><a href="Watches.html">Smart Watches</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_100x.png?v=1663753167" alt="">
+            <h3><a href="#">Basshead Wired</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_100x.png?v=1663753243" alt="">
+            <h3><a href="#">Stone Speakers</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_100x.png?v=1663753280" alt="">
+            <h3><a href="#">Aavante Home Audio</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_100x.jpg?v=1663753774" alt="">
+            <h3><a href="#">Mobile Accessories</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_100x.png?v=1663755824" alt="">
+            <h3><a href="Trabel.html">Trebel for Women</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_100x.png?v=1663755658" alt="">
+            <h3><a href="#">Limited Edition</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_100x.png?v=1663753379" alt="">
+            <h3><a href="#">Misfit Trimmers</a></h3>
+          </div>
+          <div>
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_100x.png?v=1663753419" alt="">
+            <h3> <a href="#">Immortal Gaming</a></h3>
+          </div> 
+
+
+
+
+                  </div>
+      </div>
+      <div class="container">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="all-images">
+    
+                <div class="small-images">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a6549acb-b075-4c3e-8ed3-9c9fcba32d42_600x.png?v=1625046216" onclick="clickimg(this)">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1bca7fb9-5f5c-42e3-930a-8a430d8a9e60_600x.png?v=1625046217" onclick="clickimg(this)">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8f01d1e9-48f4-4e55-886d-0b255b9bbf24_600x.png?v=1625045855" onclick="clickimg(this)">
+                         </div>
+                <div class="main-images">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/e7910a39-186a-41f6-ac57-fc3e84108104_600x.png?v=1625045106" id="imagebox">
+                </div>
+                </div>
+            </div>
+            <div class="text">
+                <div class="content">
+                    <p class="brand">Brand:boAt</p>
+                    <h2>boAt Storm Smart Watches with Full-Touch 33mm Curved Color Display, SpO2 Sensor and 8 Active Sports Mode</h2>
+                    <div class="review">
+                        <span>(4.9)</span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="pricebox">
+                        <p class="price">&#8377;2499</p>
+                       <s>&#8377; 5990</s>
+                    </div>
+                   
+                    <button>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                    <button class="buy">
+                        <span class="fa fa-shopping-cart"></span>
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+       </div> 
+       <div class="main">
+        <div class="sbmain">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/icon-1b.png?v=1654855622">
+            <p>1 Year Warranty</p>
+        </div>
+        <div class="sbmain">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/icon-3b.png?v=1654855622">
+            <p>7 Days Replacement</p>
+        </div>
+        <div class="sbmain">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/icon-2b.png?v=1654855622">
+            <p> Free Shipping</p>
+        </div>
+        <div class="sbmain">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/icon-4b.png?v=1654855622">   
+            <p>Secure Checkout</p>
+        </div>
+    </div>
+    <!-- main heading2 -->
+    <div class="main2">
+        <div class="sbmain1">
+           <p>DESCRIPTION</p>
+        </div>
+        <div class="sbmain1">
+            <p>SPECIFICATIONS</p>
+         </div>
+         <div class="sbmain1">
+            <p>REVIEWS (1185)</p>
+         </div>
+    </div>
+    <!-- main heading3-->
+    <div class="main3">
+        <div class="sbmain2">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD131_W.png?v=1615029254">
+        </div>
+    </div>
+    <!-- boAt Airdopes 131 - Wireless Earbuds -->
+    <div class="main4">
+        <h1>Wave Connect - Best Bluetooth Calling Smartwatch in India</h1>
+        <p style="text-align:center">Sleek. Comfortable. Stylish. And a Splash of Incredible Colours. Bring alive your favourite sounds with these true wireless earbuds Equipped with 13mm drivers for the magical boAt signature sound. Designed for supreme ease with Insta Wake N’ Pair technology that auto connects the moment it’s out of the case and Type C Charging. Tws earbuds to drown all the sounds you don’t need and live every moment. With a battery capacity of 40mAh for each earbud, indulge in a blissful audio experience for up to 3 hours in a go. Tap into instant wireless functionality with optimum Bluetooth V5.0</p>
+    </div>
+    <div id="footer1">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5.png?v=1661838672" alt="">
+          <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+          <div class="emailSubmit">
+            <input type="email" placeholder="Email Address">
+            <button>SUBSCRIBE</button>
+          </div>
+        </div>
+        
+        <div class="f1">
+          <h3>SHOP</h3>
+          <p>True Wireless Earbuds</p>
+          <p>Wired Headphones</p>
+          <p>Home Audio</p>
+          <p>Smart Watches</p>
+          <p>Misfit</p>
+          <p>Rock in India</p>
+        </div>
+        <div class="vLine oddL"></div>
+        <div class="f1">
+          <h3> </h3><br>
+          <p>Wireless Headphones</p>
+          <p>Wireless Speakers</p>
+          <p>Mobile Accessories</p>
+          <p>TRebel</p>
+          <p>Gift Card</p>
+          <p>Earn Rs. 100</p>
+        </div>
+        <div class="vLine"></div>
+        <div class="f1">
+          <h3>HELP</h3>
+          <p>Track your order</p>
+          <p>Return policy</p>
+          <p>Bulk order</p>
+          <p>Why buy direct</p>
+        </div>
+        <div class="vLine oddL2"></div>
+        <div class="f1">
+          <h3></h3><br>
+          <p>Warranty & Support</p>
+          <p>Service Centers</p>
+          <p>FAQs</p>
+        </div>
+        <div class="vLine"></div>
+        <div class="">
+          <h3>COMPANY</h3>
+          <p>About boAt</p>
+          <p>News</p>
+          <p>Read Our Blog</p>
+          <p>Careers</p>
+          <p>Security</p>
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+          <p>Investor Relations</p>
+          <p>Social Responsibility</p>
+          <p>Warranty Policy</p>
+        </div>
+      </div>
+      <hr>
+  
+      <div class="socialMedia">
+        <p><i class="fa fa-facebook-official" aria-hidden="true" style="font-size:48px;color:blue;"></i></p>
+        <p><i class="fa fa-twitter" aria-hidden="true" style="font-size:48px;color:blue;"></i></p>
+        <p><i class="fa fa-instagram" aria-hidden="true" style="font-size:48px;color:#fbad50;" ></i></p>
+        <p><i class="fa fa-youtube-play" aria-hidden="true" style="font-size:48px;color:red;"></i></i></p>
+        <p><i class="fa fa-linkedin-square" aria-hidden="true"style="font-size:48px;color:blue;"></i></p>
+      </div><hr>
+  
+      <div class="extra">
+        <div>
+          <h3>Download the App</h3>
+          <div class="playStore">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play.png?v=1608620293" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store.png?v=1608620293" alt="">
+          </div>
+        </div>
+        <div>
+          <h3>We Accept</h3>
+          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_900x_aff68517-98f4-4a82-9aee-2405cea66251_350x.png?v=1650262054" alt="">
+        </div>
+    
+</body>
+</html>
+<script src="https://kit.fontawesome.com/0ed43cb816.js" crossorigin="anonymous"></script>
+<script>
+    function displayData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector(".mouse").addEventListener("mouseleave",removeData)
+  }
+  document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+  function removeData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+  }
+  document.querySelector(".mouse").addEventListener("mouseleave",removeData)
+
+
+
+  
+    function clickimg(smallImg)
+    {
+        var fullImg=document.getElementById("imagebox");
+        fullImg.src=smallImg.src;
+    }
+
+
+
+    function displayData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector("body").addEventListener("mouseleave",removeData)
+  }
+  document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+  function removeData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+  }
+  document.querySelector("body").addEventListener("mouseleave",removeData)
+   
+
+
+
+</script>
+</script>

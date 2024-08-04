@@ -1,0 +1,1145 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <title>Document</title>
+        <style>
+          *{
+    margin: 0px;
+    padding: 0px;
+  }
+  #Banner{
+width:auto;   
+  }
+
+    #Banner>img{
+        width:100%  ;
+        margin-top:90px;
+    }
+    #container{
+
+        width: auto;
+        height: 1700px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: auto;
+        /* border: 2px solid green; */
+    }
+
+    .main {
+        display: grid;
+    
+        margin: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 40px 20px;
+         /* border: 5px solid green;  */
+        width: 100%;
+        height: 1550px;
+        margin-top: 20px;
+    }
+    
+    .main>div {
+   
+        line-height: 15px;
+
+        background-color: #e3e3e3;
+        border-radius: 10px;
+        height: 475px;
+        padding: 0px 5px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    
+    .main>div>a img {
+        width: 100%;
+        margin: auto;
+        height: 60%;
+    }
+    
+    .main>div>div {
+        background-color: white;
+        height: 170px;
+        width: auto;
+        border-radius: 10px;
+        padding: 8px;
+        line-height: 25px;
+    }
+    
+    .main>div>div>p:nth-child(1) {
+        font-weight: bold;
+    }
+    
+    .main button {
+        background-color: #f7c20a;
+        color: white;
+        padding: 8px 12px;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        border: none;
+        border-radius: 20px;
+    }
+    
+    .p {
+        width: 96%;
+        margin: auto;
+        margin-top:50px;
+
+    }
+    
+    .p h1 {
+        font-size: 28px;
+    }
+    
+    .pp p {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400px;
+        margin-top: 40px;
+        margin: 24px 0px 15px;
+        word-spacing: 5px;
+        font-family: Montserrat;
+        color:#c2c2c2;
+    }
+    
+    .bottom {
+        height: 300px;
+        margin: auto;
+        width: 95%;
+        display: grid;
+        /* margin-top: 20px; */
+        gap: 20px;
+        /* border:2px solid red; */
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .mbottom {
+        background-color: #e3e3e3;
+        width: 90%;
+        /* margin-top: 20px; */
+        /* border: 2px solid rebeccapurple; */
+    } 
+    
+    .bottom1 {
+        /* border: 2px solid rebeccapurple; */
+        width: 100%;
+        height: 40%;
+    }
+    
+    .bottom1>img {
+        /* border: 2px solid rebeccapurple; */
+        width: 100%;
+        height: 100%;
+
+    }
+    
+    #read {
+        text-decoration: underline;
+        text-align: justify;
+        cursor: pointer;
+    }
+    
+    .mbottom>button {
+        width: auto;
+        border: none;
+        margin-top: 40px;
+        margin-left: 20px;
+        padding: 10px;
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        text-decoration: underline;
+        background-color: #e3e3e3;
+    }
+    
+    .mbottom>button:hover {
+        color: red;
+        text-decoration: none;
+    }
+    
+    #div_icon {
+        display: flex;
+    }
+    
+    #div_icon>i {
+        color: red;
+        font-size: 20px;
+    }
+    
+    HR+div {
+        display: flex;
+    }
+    
+    HR+div>p:last-child {
+        text-decoration: line-through;
+        margin-left: 20px;
+    }
+    
+    button+div {
+        height: 19px;
+        margin-top: 11px;
+        border-radius: 5px;
+    }
+    
+    button+div div {
+        height: 100%;
+        font-size: 15px;
+    }
+    .navbar1{
+        margin: auto;
+        width:auto;
+    }
+       
+    #header{
+        display: flex;
+        justify-content: space-around;
+          margin: auto;
+        padding: 20px 0px;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        left: 0px;
+        z-index: 9999;
+        width:auto;
+        height: 45px;
+        background-color: white;
+        /* border:5px solid green; */
+        box-shadow: rgba(40, 40, 40, 0.1) 0px 20px 20px -10px;
+    }
+    
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    
+    .mouse{
+      cursor: pointer;
+      border: none;
+      background-color: white;
+      font-size: 16px;
+    }
+    .curser{
+      width: 80%;
+      padding: 40px;
+      margin: auto;
+      margin-left: 40px;
+      margin-top: 80px;
+      display: none;
+      cursor: pointer;
+      grid-template-columns: repeat(4,1fr);
+      justify-content: space-around;
+      position: absolute;
+      position: fixed;
+      
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+    .curser>div{
+      margin: auto;
+      text-align: center;
+    }
+    
+    .search>input{
+      border-radius: 23px;
+      padding: 0 30px;
+      border: none;
+      background-color: #f7f4f4;
+    }
+    
+    .category{
+        display: flex;
+        gap: 30px;
+        /* border: 2px solid blue; */
+        margin: 10px;
+    }
+    .search{
+        display: flex;
+        /* margin-right: 40px; */
+        gap: 30px;
+         /* border: 2px solid blue; */
+        margin: 10px;
+    }
+    .search i{
+        margin-top: 2px;
+    }
+    
+    body{
+        margin: auto;
+    
+         /* margin-left: 40px;
+        margin-right: 40px;  */
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    
+
+.blackBack{
+margin-top:100px; 
+background-color: black;
+padding:20px;
+}
+.blackBack p{
+color: white;
+width: 50%;
+margin: auto;
+text-align: center;
+/* padding: 21px 0; */
+font-size:12px;
+}
+
+#footer1 p{
+font-size: 13px;
+color: rgb(158, 157, 157);
+}
+
+.f1{
+width:10%;
+
+}
+.vLine{
+border: 1px solid rgb(230, 230, 230);;
+width: 0px;
+margin-top: 10px;
+margin-bottom: 30px;
+
+
+}
+.oddL{
+margin-top: 50px;
+margin-bottom: 120px;
+margin-right: -40px;
+
+}
+.oddL2{
+margin-top: 50px;
+margin-bottom: 180px;
+margin-right: -40px; 
+}
+
+.socialMedia{
+display: flex;
+gap: 30px;
+font-size: 25px;
+width: 96%;
+margin: auto;
+}
+.playStore{
+display: flex;
+}
+
+
+
+.emailSubmit{
+border: 1px solid red;
+padding: 6px;
+border-radius: 6px;
+display: flex;
+justify-content: space-between;
+}
+.emailSubmit>button{
+border: none;
+border-radius: 6px;
+color: white;
+font-size: 17px;
+padding: 10px 25px;
+background-color: rgb(220, 24, 37);
+}
+.emailSubmit>input{
+border: none;
+box-sizing: border-box;
+width: 100%;
+}
+hr{
+width: 96%;
+margin: auto;
+} 
+
+.main h3{
+    font-size:15px;
+    font-weight: bold;
+}
+select{
+    background-color:gray;
+     padding: 20px;
+    color:white;
+    font-size: 20px;
+    border: no;
+}
+
+.extra{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+/* gap:300px; */
+width: 96%;
+margin: auto;
+}
+
+#footer1{
+display: flex;
+flex-wrap: wrap;
+gap: 60px;
+justify-content: space-between;
+margin-top: 40px;
+width: 96%;
+margin: auto;
+margin-top: 20px;
+}
+
+
+    @media only screen and (min-width: 421px) and (max-width: 720px) {
+      
+      #navbar{
+        width:auto;
+        padding: 0px;
+        margin: 0px;
+      }
+      #header{
+        padding: 0px;
+        margin: 0px;
+        width:auto;
+        border: 1px solid red;
+      }
+      .category{
+        display: none;
+      }
+      
+      .search{
+        display: none;
+      }
+      .search>input{
+        display: none;
+      }
+      .search>p{
+        display: none;
+      }
+      #banner{
+        border:1px solid red;
+        width:auto;
+      }
+      .container{
+        width:auto;
+      }
+
+      .filter{
+        border:1px solid red;
+        width:100%;
+        display: flex;
+        height:auto;
+        justify-content:space-between;
+      }
+      .filter>div{
+        border: 1px solid red;
+        width:49%;
+        height:90%;
+        padding: 0px;
+        gap:20px;
+      }
+      #sortName{
+        width:100%;
+
+      }
+      #sortPrice{
+        width:100%;
+      }
+
+      .main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 500px);
+        width:auto;
+        gap:10px;
+        
+      }
+      .main>div{
+        width:auto;
+      }
+      .p{
+        margin-top: 1500px;
+        width:auto;
+      }
+      .bottom{
+        height:350px;
+      }
+      #footer1{
+        width:50%;
+      }
+
+  }
+        @media only screen and (min-width: 721px) and (max-width: 1120px) {
+          
+          #navbar{
+            width:auto;
+            padding: 0px;
+            margin: 0px;
+          }
+          #header{
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          left: 0px;
+          z-index: 9999;
+        }
+        #header button, input{
+          padding: 4px 8px;
+        }
+        .category{
+          display: none;
+        }
+        
+        .search{
+          display: none;
+        }
+
+#banner{
+  border:1px solid red;
+  width:auto;
+}
+.container{
+  width:auto;
+}
+
+.filter{
+  border:1px solid red;
+  width:100%;
+  display: flex;
+  height:auto;
+  justify-content:space-between;
+}
+.filter>div{
+  border: 1px solid red;
+  width:49%;
+  height:90%;
+  padding: 0px;
+  gap:20px;
+}
+#sortName{
+  width:100%;
+
+}
+#sortPrice{
+  width:100%;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 500px);
+  width:auto;
+  gap:10px;
+  
+}
+.main>div{
+  width:auto;
+}
+.p{
+  margin-top: 500px;
+  width:auto;
+}
+.bottom{
+  height:350px;
+}
+#footer1{
+  width:50%;
+}
+}
+
+
+
+
+
+        </style>
+   </head>
+    
+    <body>
+        <div id="navbar">
+      
+            <div id="header">
+                <div class="logo">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5_small.png?v=1661838672" alt="">
+                </div>
+                <div class="category">
+                    <p> <button class="mouse">CATEGORIES</button></p>
+                    <p>SAIL WITH BOAT</p>
+                    <p>OFFER ZONE</p>
+                    <p>MORE</p>
+                </div>
+                <div class="search">
+                    <input type="search" placeholder='Enter Product Name Here'>
+                    
+                    <p><i class="fa-solid fa-user"></i></p>
+                    <p><i class="fa-solid fa-headset"></i></p>
+                    <p><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="nitems"></span></a></p>
+                </div>
+            </div>
+            <div class="curser">
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_100x.png?v=1663752600" alt="">
+                <h4><a href="Earburd.html">Airdropes True Wirelss</a></h4>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_100x.png?v=1663752867" alt="">
+                <h3><a href="Headphone.html">Rockerz Wireless</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear_100x.jpg?v=1663753638" alt="">
+                <h3><a href="Watches.html">Smart Watches</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_100x.png?v=1663753167" alt="">
+                <h3><a href="#">Basshead Wired</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_100x.png?v=1663753243" alt="">
+                <h3><a href="#">Stone Speakers</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_100x.png?v=1663753280" alt="">
+                <h3><a href="#">Aavante Home Audio</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash_100x.jpg?v=1663753774" alt="">
+                <h3><a href="#">Mobile Accessories</a></h3>
+
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09_100x.png?v=1663755824" alt="">
+                <h3><a href="Trabel.html">Trebel for Women</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition_100x.png?v=1663755658" alt="">
+                <h3><a href="#">Limited Edition</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_100x.png?v=1663753379" alt="">
+                <h3><a href="#">Misfit Trimmers</a></h3>
+              </div>
+              <div>
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_100x.png?v=1663753419" alt="">
+                <h3> <a href="#">Immortal Gaming</a></h3>
+              </div>
+            </div>
+          </div>
+        <div id="Banner">
+            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734">
+
+    
+    
+        </div>
+        <div id="container">
+            <h1>Wireless Earbuds</h1>
+             
+           <div class="filter">
+                <div>
+                    <select id="sortName" onchange="NameSort()">
+                        <option value="none">Sort By Filter Name</option>
+                        <option value="ascending">Alphabetically, Z-A</option>
+                        <option value="descending">Alphabetically, A-Z</option>
+                     
+                      </select>
+                </div>
+                <div>
+                  <!-- <span>sort by price</span> -->
+                    <select id="sortPrice" onchange="PriceSort()">
+                        <option value="soni"> Sort By Filter Price</option>
+                      
+                        <option value="ascending">Price, low to high</option>
+                        <option value="descending">Price, high to low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main">
+              
+            </div>
+    
+    
+        </div>
+        <div class="p">
+            <h1>Airdopes - The Top Rated Bluetooth Earbuds in the Market</h1>
+            <div class="pp">
+                <p>Effortless. Simple. Powerful. boAt Rockerz Wireless series brings high-fidelity audio paired with premium design to experience sound like no other. From deep, rich bass to clean highs, you’ll hear every note with a new sense of clarity. boAt Rockerz come with premium dynamic drivers tweaked as per boAt’s high quality standards.</p>
+                <p>The Rockerz series is expertly crafted to give the best sounding experience whether it is playing games, talking on a call or enjoying med.</p>
+                <p>Made from fine and premium materials, these bluetooth earbuds are made to be comfortable and secure. You can choose from a variety of silicone tips provided to adjust accordingly and ensure a supreme and comfortable fit based on how you want
+                    your experience to be.</p>
+              <p>With Qualcomm’s latest chipsets built in, Rockerz offers real-time experience with low latency and extended battery usage. Featuring Enx noise cancellation technology, the technology suppresses and cancels out ambient noise for clear voice capture, delivering the best possible sound quality on headphones, earphones with mic etc. Passive noise cancelling earphones take immersion to the next level with crisp and clear audio along with one touch Google or Siri activation that makes life easier.</p>
+            <p>Our headphones feature soft ear cups to lightweight premium neckband fit that reduce pressure and offer unrivaled comfort for a premium, snug fit. Whether you are out for an excursion or just enjoying me-time; pushing oneself at the gym or at work from home, the Rockerz series are the perfect companion. Keeping up with the latest trends, Rockerz earphones are available in a variety of colours to choose from. Drawing from industry experience, boAt brings to you the best headphones, earphones and neckbands the industry has to offer. </p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="mbottom">
+                <div class="bottom1">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/sd.jpg?v=1659088152">
+                </div>
+                <p id="read">Check out the boAt Best Earphnone Under 100</p>
+                <button>Read More</button>
+            </div>
+            <div class="mbottom">
+                <div class="bottom1">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/blog1.jpg?v=1652187095">
+                </div>
+                <p id="read">Best Earbuds Under 2000 to Vibe to Your Playlist</p>
+                <button>Read More</button>
+            </div>
+            <div class="mbottom">
+                <div class="bottom1">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/500-ANC-BLOG.jpg?v=1650967056">
+                </div>
+                <p id="read">Airdopes 500 ANC and a Cancel Culture You Can Get Behind</p>
+                <button>Read More</button>
+            </div>
+            <div class="mbottom">
+                <div class="bottom1">
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Decoding-Active-Noise-Cancellation-1_2.jpg?v=1648622557">
+                </div>
+                <p id="read">How Noise Cancelling Headphones and Earphones Empower You To Listen To What Matters</p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <button style='width:20px' ><a href="#Banner">^</a></button>
+        <div class="blackBack">
+            <p>
+              India's fastest growing audio & wearables brand. The most incredible 
+            range of wireless earphones, earbuds, headphones,
+            smart watches, and home audio. From workouts to adventures, 
+            boAt will get you sailing!
+            </p>
+          </div>
+          <div id="footer1">
+            <div>
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5.png?v=1661838672" alt="">
+              <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+              <div class="emailSubmit">
+                <input type="email" placeholder="Email Address">
+                <button>SUBSCRIBE</button>
+              </div>
+            </div>
+            
+            <div class="f1">
+              <h3>SHOP</h3>
+              <p>True Wireless Earbuds</p>
+              <p>Wired Headphones</p>
+              <p>Home Audio</p>
+              <p>Smart Watches</p>
+              <p>Misfit</p>
+              <p>Rock in India</p>
+            </div>
+            <div class="vLine oddL"></div>
+            <div class="f1">
+              <h3> </h3><br>
+              <p>Wireless Headphones</p>
+              <p>Wireless Speakers</p>
+              <p>Mobile Accessories</p>
+              <p>TRebel</p>
+              <p>Gift Card</p>
+              <p>Earn Rs. 100</p>
+            </div>
+            <div class="vLine"></div>
+            <div class="f1">
+              <h3>HELP</h3>
+              <p>Track your order</p>
+              <p>Return policy</p>
+              <p>Bulk order</p>
+              <p>Why buy direct</p>
+            </div>
+            <div class="vLine oddL2"></div>
+            <div class="f1">
+              <h3></h3><br>
+              <p>Warranty & Support</p>
+              <p>Service Centers</p>
+              <p>FAQs</p>
+            </div>
+            <div class="vLine"></div>
+            <div class="">
+              <h3>COMPANY</h3>
+              <p>About boAt</p>
+              <p>News</p>
+              <p>Read Our Blog</p>
+              <p>Careers</p>
+              <p>Security</p>
+              <p>Terms of Service</p>
+              <p>Privacy Policy</p>
+              <p>Investor Relations</p>
+              <p>Social Responsibility</p>
+              <p>Warranty Policy</p>
+            </div>
+          </div>
+          <hr>
+      
+          <div class="socialMedia">
+            <p><i class="fa fa-facebook-official" aria-hidden="true" style="font-size:48px;color:blue;"></i></p>
+            <p><i class="fa fa-twitter" aria-hidden="true" style="font-size:48px;color:blue;"></i></p>
+            <p><i class="fa fa-instagram" aria-hidden="true" style="font-size:48px;color:#fbad50;" ></i></p>
+            <p><i class="fa fa-youtube-play" aria-hidden="true" style="font-size:48px;color:red;"></i></i></p>
+            <p><i class="fa fa-linkedin-square" aria-hidden="true"style="font-size:48px;color:blue;"></i></p>
+          </div><hr>
+      
+          <div class="extra">
+            <div>
+              <h3>Download the App</h3>
+              <div class="playStore">
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/google-play.png?v=1608620293" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/app-store.png?v=1608620293" alt="">
+              </div>
+            </div>
+            <div>
+              <h3>We Accept</h3>
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fotter_payment_icn_2_900x_aff68517-98f4-4a82-9aee-2405cea66251_350x.png?v=1650262054" alt="">
+            </div>
+        
+      
+    </body>
+    
+    
+    </html>
+    <script src="https://kit.fontawesome.com/0ed43cb816.js" crossorigin="anonymous"></script>
+    <script>
+              var mensData = [{
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",
+            name: "Airdopes 131",
+            review: "4.8 | 1186 reviews",
+            price: "899",
+            strikedoffprice: "2990",
+            saveprice: "You Save: 2091 (70%)",
+            progress: '75%',
+            clickLink:'ear1.html',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ivory-white_69842c05-b55f-48ff-90ed-9411992d960d_400x.png?v=1658994528",
+            name: "TRebel Airdopes 131",
+            review: "4.8 | 1186 reviews",
+            price: "699",
+            strikedoffprice: "999",
+            saveprice: "You Save:2091 (70%)",
+            progress: '50%',
+            clickLink:'ear2.html',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/pink_93d7a9ed-186f-4081-a184-bad918274e7b_600x.png?v=1658994528"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/white_600x.png?v=1657869596",
+            name: "Airdopes 141 ",
+            review: "4.8 | 1186 reviews",
+            price: "945",
+            strikedoffprice: "2099",
+            saveprice: "You Save:2091 (70%)",
+            progress: '60%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1657869596"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1657869596",
+            name: "TRebel Airdopes 141 with 8mm .....",
+            review: "4.8 | 1186 reviews",
+            price: "399",
+            strikedoffprice: "799",
+            saveprice: "You Save:2091 (70%)",
+            progress: '90%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WHITE_1_6939c4f7-eb39-476e-970e-5aa469f339f1_700x.jpg?v=1658996617"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Grey_560cad08-698b-45d6-a3dd-d10ae3fec8ee_400x.png?v=1657775492",
+            name: "Airdopes 131 PRO ",
+            review: "4.8 | 1186 reviews",
+            price: "1620",
+            strikedoffprice: "3599",
+            saveprice: "You Save:2091 (70%)",
+            progress: '30%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blue_0b68b413-f3ee-4c92-84bc-ba9cd6665463_600x.png?v=1657775058"
+    
+            }, {
+                image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c5f9fe7c-c012-4d93-ba0c-b25267c0560d_400x.png?v=1647426797",
+            name: " Airdopes 411 ANC",
+            review: "4.8 | 1186 reviews",
+            price: "1440",
+            strikedoffprice: "3199",
+            saveprice: "You Save:2091 (70%)",
+            progress: '40%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_41abf7ad-3d7f-4189-a93a-08fefd02ba45_600x.png?v=1647426798"
+    
+                
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/fvtfgvt_700x.png?v=1658150489",
+            name: "Airdopes 121 PRO",
+            review: "4.8 | 1186 reviews",
+            price: "1999",
+            strikedoffprice: "3199",
+            saveprice: "You Save:2091 (70%)",
+            progress: '55%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/iiolo_700x.png?v=1658150489"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_400x.png?v=1612765376",
+            name: "Airdopes 121 v2",
+            review: "4.8 | 1186 reviews",
+            price: "769",
+            strikedoffprice: "1099",
+            saveprice: "You Save:2091 (70%)",
+            progress: '80%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-black_600x.png?v=1612765376"
+    
+            }, {
+                image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/115-main2_400x.png?v=1655368638",
+            name: "Airdopes 115",
+            review: "4.8 | 1186 reviews",
+            price: "769",
+            strikedoffprice: "1099",
+            saveprice: "You Save:2091 (70%)",
+            progress: '90%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/115-main1_600x.png?v=1655368638"
+    
+            }, {
+                image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/402-main-img_400x.png?v=1630059242",
+            name: " Airdopes 402",
+            review: "4.8 | 1186 reviews",
+            price: "769",
+            strikedoffprice: "1199",
+            saveprice: "You Save:2091 (70%)",
+            progress: '30%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/7925e2ed-89e7-4247-8f27-380ef0178294_600x.png?v=1625045867"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_e269db64-c847-4f30-b904-ccb4d973ae52_400x.png?v=1655526604",
+            name: "Airdopes 131 DC Edition ",
+            review: "4.8 | 1186 reviews",
+            price: "969",
+            strikedoffprice: "1099",
+            saveprice: "You Save:2091 (70%)",
+            progress: '77%',
+            image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_e05a4bee-499f-42da-8db5-e3921a185f5c_600x.png?v=1655526604"
+    
+            }, {
+            image_url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_fa1c6ec3-93b7-443e-ae82-d5eeb34258f8_400x.png?v=1641206192",
+            name: "Airdopes 161",
+            review: "4.8 | 1186 reviews",
+            price: "869",
+            strikedoffprice: "1099",
+            saveprice: "You Save:2091 (70%)",
+            progress: '99%',
+                image_new: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_a80b6882-1247-439d-a17b-1c87ed4fa7c8_600x.png?v=1641206192"
+    
+            },
+    
+
+
+
+
+    
+        ];
+    
+        
+    
+        // let cartarr = JSON.parse(localStorage.getItem("cart_Items")) || [];
+        function display(){
+        document.querySelector('.main').innerHTML = null;
+        mensData.forEach(function(el,i) {
+            let card = document.createElement("div");
+            let imgLink=document.createElement('a')
+            imgLink.setAttribute("href", el.clickLink);
+            let productimg = document.createElement("img");
+            productimg.src =el.image_url;
+            imgLink.appendChild(productimg);
+            let newimg=document.createElement('img')
+            newimg.src=el.image_new
+            imgLink.appendChild(newimg)
+            // console.log(imgLink,newimg)
+            newimg.style.display='none'
+      
+            productimg.addEventListener("mouseover",  function(){
+            productimg.style.display='none'
+            newimg.style.display='block'
+            console.log('hiii')
+        });
+        productimg.addEventListener("mouseout",  function(){
+            productimg.style.display='block'
+            newimg.style.display='none'
+            // console.log('hiii')
+        });
+            let divm = document.createElement("div");
+            let name1 = document.createElement("h3");
+            name1.innerText = el.name;
+            let review = document.createElement("p");
+            review.innerText = el.review;
+    
+            div_icon = document.createElement("div");
+            div_icon.setAttribute("id", "div_icon")
+            let icon = document.createElement("i")
+            icon.setAttribute("class", "fa-solid fa-star")
+            div_icon.append(icon, review);
+            let x = document.createElement("HR");
+    
+    
+            var pricebox = document.createElement("div");
+            var price = document.createElement("p");
+            price.innerText = "₹ "+el.price;
+            var strikeprice = document.createElement("p");
+            strikeprice.innerText = "₹ "+el.strikedoffprice
+            pricebox.append(price);
+            pricebox.append(strikeprice);
+            let saveprice = document.createElement("p");
+            saveprice.innerText = el.saveprice;
+            let btn1 = document.createElement("button");
+            btn1.innerText = "Add to cart";
+            let mProgress = document.createElement('div')
+            mProgress.style.backgroundColor = 'grey'
+            let progress = document.createElement("div");
+            progress.style.width = el.progress;
+            progress.style.backgroundColor = 'yellow' 
+            progress.style.borderRadius="5px";
+            progress.innerHTML = el.progress;
+            mProgress.append(progress)
+            btn1.addEventListener("click", function() {
+                addtocart(i);
+            })
+            divm.append(name1, div_icon, x, pricebox, saveprice, btn1, mProgress)
+            card.append(imgLink, divm)
+            document.querySelector(".main").append(card);
+    
+        });
+      }
+        display();
+
+      
+  //       var bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+  // function addtocart(el) {
+    
+  //   bookmarks.push(el);
+   
+  //   localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
+  // }
+  //   function displayData(){
+  //   var keep = document.querySelector(".curser")
+  //   keep.style.display = "grid";
+  //   keep.style.background = "white";
+  //   document.querySelector(".mouse").addEventListener("mouseleave",removeData)
+  // }
+  // document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+  // function removeData(){
+  //   var keep = document.querySelector(".curser")
+  //   keep.style.display = "none";
+  // }
+  // document.querySelector(".mouse").addEventListener("mouseleave",removeData)
+  var cartProduct = JSON.parse(localStorage.getItem("cart")) || []
+        
+        function addtocart(index){
+            event.preventDefault()
+            alert("This Product is added to Cart")
+            var flag = 0
+            var indx  = 0
+            var prod = mensData.filter(function(elem,i){
+                return i == index
+            })
+            var cartp = cartProduct.filter(function(elem,i){
+                if(elem.name === prod[0].name){
+                    flag = 1
+                    ind = i
+                }
+            })
+            if(flag == 0){
+                prod[0].qty = 1
+                cartProduct.push(prod[0])
+            }
+            else{
+                cartProduct[ind].qty++
+                flag = 0
+            }
+            
+            localStorage.setItem("cart",JSON.stringify(cartProduct))
+            console.log(cartProduct)
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || []
+             var items =  cartItems.length
+              console.log(items)
+             if(items>0){
+             document.querySelector(".nitems").innerText = items
+               }
+            
+        }
+    var cartItems = JSON.parse(localStorage.getItem("cart")) || []
+    var items =  cartItems.length
+    console.log(items)
+    if(items>0){
+    document.querySelector(".nitems").innerText = items
+    }
+
+        function displayData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector("body").addEventListener("mouseleave",removeData)
+  }
+  document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+  function removeData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+  }
+  document.querySelector("body").addEventListener("mouseleave",removeData)
+   
+   
+  function NameSort(){
+      var selectedValue=document.getElementById("sortName").value;
+      console.log(selectedValue)
+      if(selectedValue==="ascending"){
+        mensData.sort(function(a,b){
+          if(a.name>b.name) return 1;
+          if(a.name<b.name) return -1;
+          return 0;
+        });
+        display();
+      }
+     else if(selectedValue==="descending"){
+        mensData.sort(function(a,b){
+          if(a.name>b.name) return -1;
+          if(a.name<b.name) return 1;
+          return 0;
+        })
+        display();
+      }
+      else if(selectedValue==="none")
+      {
+
+        display();
+      }
+      
+      
+    }
+      
+        function PriceSort() {
+            var val =document.querySelector("#sortPrice").value;
+      
+          
+            if(val==="ascending"){
+                mensData.sort(function (x, y) {
+        
+        return parseInt(x.price) - parseInt(y.price);
+    });
+ }
+        else if(val==="descending"){
+        mensData.sort(function (x, y) {
+     
+        return parseInt(y.price) - parseInt(x.price);
+    }); 
+}
+display()
+}
+
+
+
+
+  
+  
+
+
+  
+    </script>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="customer_details.css">
+</head>
+<body>
+    <div id="main">
+        <div id="main1">
+            <div id="image">
+                <img src="https://cdn.gokwik.co/merchant/155/logo1632914610996.jpeg" 
+              alt="boat">
+            </div>
+
+            <div id="address">
+                <div><p id="addnew">Add New Address</p></div>
+                <div><p id="fields">* Mandatory Fields</p></div>
+                
+            </div>
+
+            <hr id="hr">
+
+            <div id="information">
+
+                <div id="fill">
+                    <p>Please fill the form :-</p>
+                </div>
+                
+                <div id="first">
+                    <label id="mobile" for="">Mobile no*.</label><br>
+                    <input id="nuber" type="number"><br>
+                    <label id="fullname" for="">Full Name *</label><br>
+                    <input id="name" type="text" required><br>
+                    <label id="city" for="">City*</label><br>
+                    <input id="cityinput" type="text" required><br>
+                </div>
+                <div id="first">
+                    <label id="email" for="">Pincode*</label><br>
+                    <input id="mail" type="text"><br>
+                    <label id="pincode" for="">E-mail*</label><br>
+                    <input id="pin" type="email"><br>
+                    <label id="state" for="">State*</label><br>
+                    <input id="stateinput" type="text" required><br>
+                </div>
+
+                <div id="fulladdress">
+                    <label id="fulladdr" for="">Full Address*</label><br>
+                    <input id="alladdress" type="text" >
+                </div>
+                
+            </div>
+
+            <div id="button"> 
+                <a href="payment.html"><button id="continue">Continue</button></a>
+            </div>
+            <p id="condition">T&C | Privacy | 991899db</p>
+            
+        </div>
+        <div id="main2">
+
+            <div id="product">
+                <div id="productdetails">
+
+                    <div id="ordersummary">
+                        <p><i  id="carticon" class="fa fa-shopping-cart"></i> Order Summary</p>
+                    </div>
+
+                    <div id="order">
+                        <img src="https://dukandwar.com/wp-content/uploads/2020/06/Boat-Rockerz-400-On-Ear-Wireless-Bluetooth-Headphones-GreyGreen_2.jpg"
+                         alt="product">
+
+                    </div>
+                    <div id="ordredetails">
+                        <div id="text">
+                            <p>Subtotal</p>
+                            <p>Coupon Discount</p>
+                            <p>Shipping</p>
+                        </div>
+
+                        <div id="textdetailes">
+                            <p class="totalPrice" ></p>
+                            <p class="cd"></p>
+                            <p>Free</p>
+                        </div>
+                        <hr id="hr">
+                    </div>
+                        <div id="ordredetails">
+                            <h4 id="text">Total Amount </h4>
+                            <h4 id="textdetaile"></h4>
+                        </div>
+            </div>
+        </div>
+
+            <div id="discount">
+                <img src="https://pdp.gokwik.co/assets/icons/coupon-discount.svg" alt="">
+                <input id="code" type="text" placeholder="Discount code" >
+            </div>
+
+            <div id="apply">
+                <button id="apply">Apply</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+</body>
+</html>
+
+<script>
+
+var tp = 0
+var allitems = JSON.parse(localStorage.getItem("cart")) || []
+function totalPrice(){
+    var tprice = allitems.reduce(function(acc,elem){
+        return acc + +(elem.price*elem.qty)
+    },0)
+    tp = tprice
+    console.log(tprice)
+    document.querySelector(".totalPrice").innerHTML = "₹"+ tprice
+    document.querySelector("#textdetaile").innerHTML = "₹" + tprice
+    document.querySelector(".cd").innerHTML = 0
+    localStorage.setItem("dPrice",tprice)
+}
+totalPrice()
+
+document.getElementById("apply").addEventListener("click",coupenApply)
+function coupenApply(){
+    
+    if(document.getElementById("code").value != "masai123")
+    {
+        alert("coupen is not valid")
+    }
+    else{
+        alert("Coupen Apply | Congratulations!! you get 20% off")
+        var discPrice = parseInt(tp* 0.8) 
+        var savingprice = parseInt(tp*0.2)
+        document.querySelector(".totalPrice").innerHTML = "₹"+ tp
+        document.getElementById("textdetaile").innerHTML = "₹"+ discPrice
+        document.querySelector(".cd").innerHTML = "20% OFF (You save ₹"  + savingprice + ")"
+        document.getElementById("code").value = ""
+        discountPrice = discPrice
+        localStorage.setItem("dPrice",discPrice)
+
+    }
+}
+
+</script>
